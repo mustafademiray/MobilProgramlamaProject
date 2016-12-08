@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    //EREN DURMUŞ 130202018
+    //EREN DURMUŞ 130202018 //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
