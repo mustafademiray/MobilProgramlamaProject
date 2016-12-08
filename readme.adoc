@@ -1,0 +1,2 @@
+[[X1]]
+proje fikri henuz belli degil, tum componentlerin birbiriyle alakalı calisacagi bir proje olacak.
