@@ -1,0 +1,13 @@
+
+[[X1]]
+
+Thread
+
+AsyncTask
+
+Thread Handler yapılarından birini kullanmak . 
+
+notification 
+
+
+
