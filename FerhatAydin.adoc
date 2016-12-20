@@ -1,0 +1,9 @@
+ spin Controller https://github.com/yapbenzet/Gui_6_Spinner
+
+ CheckBox : https://github.com/yapbenzet/Gui_5_KahveServisi
+
+AuotoComplete TextView : 
+
+ImageView
+
+Radio Button vb. View ların kullanılması 
