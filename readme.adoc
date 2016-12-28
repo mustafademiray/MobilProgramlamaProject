@@ -1,2 +1,4 @@
 [[X1]]
-proje fikri henuz belli degil, tum componentlerin birbiriyle alakalı calisacagi bir proje olacak.
+Proje Adı- Ülke Sorgu
+
+Menüde seçilen ülkenin özet bilgilerini webservice ile çekip gösterir.
