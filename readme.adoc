@@ -1,4 +1,4 @@
 [[X1]]
 Proje Adı- Ülke Sorgu
 
-Menüde seçilen ülkenin özet bilgilerini webservice ile çekip gösterir.
+Menüde seçilen ülkenin nüfus bilgilerini webservice ile çekip gösterir.
