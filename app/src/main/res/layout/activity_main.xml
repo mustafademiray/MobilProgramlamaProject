@@ -34,16 +34,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/argentina"
-                    android:id="@+id/imageView6"
+                    android:id="@+id/argentina"
                     android:layout_weight="1"
-                    android:clickable="false" />
+                    android:clickable="true" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/australia"
-                    android:id="@+id/imageView7"
+                    android:id="@+id/australia"
                     android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chile"
+                    android:id="@+id/chile"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/costarica"
+                    android:id="@+id/costarica"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp" />
 
             </LinearLayout>
 
@@ -57,14 +80,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/brazil"
-                    android:id="@+id/imageView15"
+                    android:id="@+id/brazil"
                     android:layout_weight="1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/england"
-                    android:id="@+id/imageView16"
+                    android:id="@+id/england"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -79,14 +102,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/france"
-                    android:id="@+id/imageView17"
+                    android:id="@+id/france"
                     android:layout_weight="1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/germany"
-                    android:id="@+id/imageView18"
+                    android:id="@+id/germany"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -101,14 +124,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/ghana"
-                    android:id="@+id/imageView20"
+                    android:id="@+id/ghana"
                     android:layout_weight="1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/greece"
-                    android:id="@+id/imageView19"
+                    android:id="@+id/greece"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -122,14 +145,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/italy"
-                    android:id="@+id/imageView22"
+                    android:id="@+id/italy"
                     android:layout_weight="1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/netherlands"
-                    android:id="@+id/imageView21"
+                    android:id="@+id/netherland"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -143,15 +166,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/spain"
-                    android:id="@+id/imageView24"
+                    android:id="@+id/spain"
                     android:layout_weight="1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/turkey"
-                    android:id="@+id/imageView23"
+                    app:srcCompat="@drawable/switzerland"
+                    android:id="@+id/switzerland"
                     android:layout_weight="1" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -163,9 +187,17 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/usa"
-                    android:id="@+id/imageView25"
+                    app:srcCompat="@drawable/turkey"
+                    android:id="@+id/turkey"
                     android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/usa"
+                    android:id="@+id/usa"
+                    android:layout_weight="1" />
+
             </LinearLayout>
 
         </LinearLayout>
