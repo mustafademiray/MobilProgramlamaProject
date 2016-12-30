@@ -314,6 +314,7 @@ public class MainActivity extends AppCompatActivity  {
                     veri="hata";
 
 
+
                 }
 
             } catch (IOException e) {
