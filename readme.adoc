@@ -2,7 +2,7 @@
 Proje Adı- Ülke Sorgu
 
 Menüde seçilen ülkenin nüfus bilgilerini jsoap ile çekip gösterir.Çekilen verinin div değerine göre tablodaki veri veri1 stringine aktarılıyor aktarılan 
-veri1 split komutu ile boşluklar referans alınarak parçalanıyor ve veri2 string katarına atılıyor.
+veri split komutu ile boşluklar referans alınarak parçalanıyor ve veri2 string katarına atılıyor.
 [source,java]
 ----
 try {
