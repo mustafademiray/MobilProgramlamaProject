@@ -293,7 +293,7 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     public class doit extends AsyncTask<Void,Void,Void> {
-        String veri1;
+        String veri;
         String [] veri2;
 
 
@@ -305,13 +305,13 @@ public class MainActivity extends AppCompatActivity  {
                 System.out.println(elements.toString());
 
                 if (elements.size()!=0){
-                    veri1=elements.text();
-                    veri2=veri1.split(" ");
+                    veri=elements.text();
+                    veri2=veri.split(" ");
 
                 }
                 else{
 
-                    veri1="Bugun Kayitlarda Herhangi bir veri bulunamadi";
+                    veri="hata";
 
 
                 }

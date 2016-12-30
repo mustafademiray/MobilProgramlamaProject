@@ -1,4 +1,31 @@
-[[X1]]
+﻿[[X1]]
 Proje Adı- Ülke Sorgu
 
-Menüde seçilen ülkenin nüfus bilgilerini webservice ile çekip gösterir.
+Menüde seçilen ülkenin nüfus bilgilerini jsoap ile çekip gösterir.Çekilen verinin div değerine göre tablodaki veri veri1 stringine aktarılıyor aktarılan 
+veri1 split komutu ile boşluklar referans alınarak parçalanıyor ve veri2 string katarına atılıyor.
+[source,java]
+----
+try {
+                Document doc = Jsoup.connect("http://www.skyturks.com/ulke_nufuslari1.asp").get();
+                Elements elements = doc.getElementsByClass("sut");
+                System.out.println(elements.toString());
+
+                if (elements.size()!=0){
+                    veri=elements.text();
+                    veri2=veri.split(" ");
+
+                }
+                else{
+
+                    veri="hata";
+
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+----
+Veri2 string katarının indexsi tıklanılan bayrağın temsil ettiği ülkeye göre değer alarak uygun verinin seçilip texview e yazılmasını sağlar.
+
+Theread yapısı kullanılmak yerine AsyncTask kullanılıp programın tıkanması önlenip işlemler arka planda yaptırılmıştır.
