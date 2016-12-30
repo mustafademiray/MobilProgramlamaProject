@@ -1,8 +1,8 @@
 ﻿[[X1]]
 Proje Adı- Ülke Sorgu
 
-Menüde seçilen ülkenin nüfus bilgilerini jsoap ile çekip gösterir.Çekilen verinin div değerine göre tablodaki veri veri1 stringine aktarılıyor aktarılan 
-veri split komutu ile boşluklar referans alınarak parçalanıyor ve veri2 string katarına atılıyor.
+Menüde seçilen ülkenin nüfus bilgilerini jsoap ile çekip gösterir.Çekilen verinin div değerine göre tablodaki veri "veri" stringine aktarılıyor aktarılan 
+"veri" split komutu ile boşluklar referans alınarak parçalanıyor ve "veri2" string katarına atılıyor.
 [source,java]
 ----
 try {
@@ -26,6 +26,6 @@ try {
                 e.printStackTrace();
             }
 ----
-Veri2 string katarının indexsi tıklanılan bayrağın temsil ettiği ülkeye göre değer alarak uygun verinin seçilip texview e yazılmasını sağlar.
+"Veri2" string katarının indexsi tıklanılan bayrağın temsil ettiği ülkeye göre değer alarak uygun verinin seçilip texview e yazılmasını sağlar.
 
 Theread yapısı kullanılmak yerine AsyncTask kullanılıp programın tıkanması önlenip işlemler arka planda yaptırılmıştır.
