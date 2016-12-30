@@ -1,6 +1,22 @@
-[[X1]]
-Scroll View,
-Progressbar ,
-List View ,
-spin Controller ,
-CheckBox 
+Mustafa DEMİRAY // 130202072 // github.com/mustafademiray
+
+Program arayüzünü hazırlama kısmı bende idi.
+
+Öncelikle uygulamamız için gereken ülke iconlarını projede rendering 
+problemi yaratmayacak şekilde uygun boyutlara indirgeyip projemizin içerisine attım.
+
+image::http://image.prntscr.com/image/d301cb58d14f48f1ae28249e4b7739d6.jpeg[]
+
+En üstte nüfus sorgusu cevabından gelen verisinin gösterilebilmesi için TextView kısmı eklendi.
+
+Daha sonra *ScrollView* yapısını kullanabilmemiz açısından linear layoutlarımı 
+içerisine koyacağım scrollview componentimi oluşturdum.
+
+Vertical linear layout içerisine her bir tanesi iki ülke bayrağı alacak şekilde
+horizontal linear layoutlar yerleştirdim. 
+
+image::http://image.prntscr.com/image/6d551b8e428648588cc08e43bd8c51b0.jpeg[]
+
+Son olarak da eklediğim imageviewlerin kullanılabilmesi için hepsini bir dizide tanımladım.
+
+image::http://image.prntscr.com/image/ff875000711a4f40bbf4da57523b69b7.jpeg[]
