@@ -3,30 +3,33 @@ package com.example.mustafa.githubproject;
 //https://github.com/mustafademiray/MobilProgramlamaProject
 //https://github.com/yagizoztekin
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
+        import android.os.AsyncTask;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
 
-import com.squareup.moshi.Moshi;
+        import android.widget.ImageView;
+        import android.widget.TextView;
 
-import org.json.JSONObject;
 
-import java.util.ArrayList;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+        import org.jsoup.Jsoup;
+        import org.jsoup.nodes.Document;
+        import org.jsoup.select.Elements;
+
+
+
+        import java.io.IOException;
+        import java.util.ArrayList;
+
+
+public class MainActivity extends AppCompatActivity  {
 
     ArrayList<ImageView> images = new ArrayList<>();
+    int veridegeri=0;
 
-    private String ENDPOINT = "http://10.0.2.2/get.php?Ulke=";
-    private static final Moshi MOSHI = new Moshi.Builder().build();
-    private Response response;
-    private JSONObject jsonObject;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,40 +37,300 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         images.add((ImageView) findViewById(R.id.argentina));
+        images.add((ImageView) findViewById(R.id.france));
+        images.add((ImageView) findViewById(R.id.italy));
+        images.add((ImageView) findViewById(R.id.england));
+        images.add((ImageView) findViewById(R.id.chile));
+        images.add((ImageView) findViewById(R.id.brazil));
+        images.add((ImageView) findViewById(R.id.australia));
+        images.add((ImageView) findViewById(R.id.costarica));
+        images.add((ImageView) findViewById(R.id.germany));
+        images.add((ImageView) findViewById(R.id.ghana));
+        images.add((ImageView) findViewById(R.id.greece));
+        images.add((ImageView) findViewById(R.id.netherland));
+        images.add((ImageView) findViewById(R.id.spain));
+        images.add((ImageView) findViewById(R.id.switzerland));
+        images.add((ImageView) findViewById(R.id.turkey));
+        images.add((ImageView) findViewById(R.id.usa));
+        images.get(0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        images.get(0).setOnClickListener(this);
+
+                try {
+                    setupVariable();
+                    veridegeri=169;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        images.get(1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
 
+                try {
+                    setupVariable();
+                    veridegeri=117;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        images.get(2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=129;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        images.get(3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=124;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=329;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        images.get(5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=33;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=297;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        images.get(7).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=572;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(8).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=85;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(9).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=265;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(10).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=403;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        images.get(11).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=324;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(12).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=164;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(13).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=513;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(14).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=95;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        images.get(15).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=23;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v) {
-        OkHttpClient client = new OkHttpClient();
 
-        ENDPOINT = ENDPOINT + "deneme";
+    private void setupVariable(){
+        new doit().execute();
+    }
 
-        // Create request for remote resource.
-        Request request = new Request.Builder().url(ENDPOINT).build();
+    public class doit extends AsyncTask<Void,Void,Void> {
+        String veri1;
+        String [] veri2;
 
-        // Get the results
-        try {
-            response = client.newCall(request).execute();
-            jsonObject = new JSONObject(response.body().string()); // payload is your JSON
-            String nufus = jsonObject.get("nufus").toString();
 
-            Toast.makeText(this, nufus, Toast.LENGTH_LONG);
-            /*
-            JSONArray my_news = jsonObject.getJSONArray("TopNews");
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Document doc = Jsoup.connect("http://www.skyturks.com/ulke_nufuslari1.asp").get();
+                Elements elements = doc.getElementsByClass("sut");
+                System.out.println(elements.toString());
 
-            ArrayList<String> my_ids = new ArrayList<String>();
+                if (elements.size()!=0){
+                    veri1=elements.text();
+                    veri2=veri1.split(" ");
 
-            for (int i = 0; i < my_news.length(); i++) {
-                JSONObject my_object = my_news.getJSONObject(0);
-                int id = Integer.parseInt(my_object.getString("nufus"));
-                my_ids.push(id);
-            }*/
-        } catch (Exception ex) {
-            ex.printStackTrace();
+                }
+                else{
+
+                    veri1="Bugun Kayitlarda Herhangi bir veri bulunamadi";
+
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            int t=0;
+
+
+            ((TextView)findViewById(R.id.textView)).setText(veri2[veridegeri]);
+
+            //169 Argentina
         }
     }
 }
