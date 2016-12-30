@@ -1,9 +1,56 @@
- spin Controller https://github.com/yapbenzet/Gui_6_Spinner
+﻿Ferhat AYDIN 130202079 Bilgisayar Mühendisliği 2. Öğretim
+github.com/aydinferhat
 
- CheckBox : https://github.com/yapbenzet/Gui_5_KahveServisi
+Menüde seçilen ülkenin nüfus bilgilerini jsoap ile çekip gösterip Çekilen verinin div değerine göre tablodaki veri "veri" stringine aktardım aktarılan 
+"veri" split komutu ile boşluklar referans alınarak parçalayıp ve "veri2" string katarına aktardım.
+[source,java]
+----
+try {
+                Document doc = Jsoup.connect("http://www.skyturks.com/ulke_nufuslari1.asp").get();
+                Elements elements = doc.getElementsByClass("sut");
+                System.out.println(elements.toString());
 
-AuotoComplete TextView : 
+                if (elements.size()!=0){
+                    veri=elements.text();
+                    veri2=veri.split(" ");
 
-ImageView
+                }
+                else{
 
-Radio Button vb. View ların kullanılması 
+                    veri="hata";
+
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+----
+"Veri2" string katarının indexsi tıklanılan bayrağın temsil ettiği ülkeye göre değer alarak uygun verinin seçilip texview e yazılmasını sağladım.
+[source, java]
+----
+images.add((ImageView) findViewById(R.id.argentina));
+
+images.get(0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=169;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+----
+[source, java]
+-----
+((TextView)findViewById(R.id.textView)).setText(veri2[veridegeri]);
+
+----
+Theread yapısı kullanılmak yerine AsyncTask kullanılıp programın tıkanması önledim işlemler arka planda yaptırılmıştır.
+
+

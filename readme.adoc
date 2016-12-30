@@ -27,5 +27,30 @@ try {
             }
 ----
 "Veri2" string katarının indexsi tıklanılan bayrağın temsil ettiği ülkeye göre değer alarak uygun verinin seçilip texview e yazılmasını sağlar.
+[source, java]
+----
+images.add((ImageView) findViewById(R.id.argentina));
 
+images.get(0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                try {
+                    setupVariable();
+                    veridegeri=169;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+----
+[source, java]
+-----
+((TextView)findViewById(R.id.textView)).setText(veri2[veridegeri]);
+
+----
 Theread yapısı kullanılmak yerine AsyncTask kullanılıp programın tıkanması önlenip işlemler arka planda yaptırılmıştır.
+
+
