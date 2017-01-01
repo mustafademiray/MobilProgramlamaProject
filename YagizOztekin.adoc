@@ -1,13 +1,51 @@
 
+Resul Yağız ÖZTEKİN// 130202040//github.com/yagizoztekin
 
+Benim bu projedeki görevim Firebase den Notification göndermekti.
 
-  Activity Yasam Döngüsü
+Önceden kurulmuş Firebase ile ayarları yaptıktan sonra bildirim gönderebilmek için bir kaç kod eklememiz lazım
 
- Intent 
+Daha sonra yeni 'IDServisi' adında yeni bir sınıf oluşturup aşağıdaki kodu ekliyoruz.
 
- Bundle 
+image::http://image.prntscr.com/image/0d27551edf51455fa5d2a29b56c0218e.png[]
 
- Shared Preferences
+Ardından 'MesajServisi' adında bir sınıf oluşturup aşağıdaki kodları ekliyoruz.
+
+import android.app.*;
+import android.content.*;
+import android.media.*;
+import android.net.*;
+import android.support.v4.app.*;
+import com.google.firebase.messaging.*;
+
+public class MesajServisi extends FirebaseMessagingService{
+
+   public void onMessageReceived(RemoteMessage remoteMessage){
+       sendNotification(remoteMessage.getNotification().getBody());
+   }
+
+   private void sendNotification(String messageBody){
+       Intent intent = new Intent(this, MainActivity.class);
+       intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+       PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+
+       Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+       NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
+               .setSmallIcon(R.mipmap.ic_launcher)
+               .setContentText(messageBody)
+               .setSound(defaultSoundUri)
+               .setContentIntent(pendingIntent);
+
+       NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+       notificationManager.notify(0, notificationBuilder.build());
+   }
+}
+
+En son bu sınıfları 'AndroidManifest.xml' dosyasının en altına bu kodları ekleyip servis olarak tanımlıyoruz;
+
+image::http://image.prntscr.com/image/842d75a4cd9c47089522098abe9e0af5.png[]
+
+ve en son olarak Firebase ye girip notification gönderebiliriz.
 
 
 
